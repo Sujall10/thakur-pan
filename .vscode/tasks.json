@@ -1,0 +1,12 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Push project to GitHub",
+			"type": "shell",
+			"command": "git init; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; git config user.name 'Sujall10'; git config user.email 'Sujall10@users.noreply.github.com'; git add .; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; git commit -m 'Initial commit'; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; git branch -M main; git remote get-url origin; if ($LASTEXITCODE -ne 0) { git remote add origin 'https://github.com/Sujall10/thakur-pan.git' } else { git remote set-url origin 'https://github.com/Sujall10/thakur-pan.git' }; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; git push -u origin main",
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}
